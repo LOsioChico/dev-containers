@@ -1,0 +1,11 @@
+services:
+  myDB:
+    image: postgres
+    container_name: database-template
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
