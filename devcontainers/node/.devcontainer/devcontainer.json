@@ -10,7 +10,10 @@
     }
   },
 
-  "runArgs": ["--name", "node_devcontainer"]
+  "runArgs": ["--name", "node_devcontainer"],
+
+  "workspaceFolder": "/repos",
+  "workspaceMount": "source=${localWorkspaceFolder}/../../repos/node,target=/repos,type=bind"
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [3000],
