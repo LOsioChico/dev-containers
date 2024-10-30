@@ -12,6 +12,8 @@
       "version": "latest", // "latest", "x.y.z"
       "jdkVersion": "17", // "latest", "8", "11", "17"
       "jdkDistro": "tem" // https://sdkman.io/jdks
-    } /* Add Scala CLI SDKMAN */
+    } /* Add Scala CLI SDKMAN */,
+
+    "ghcr.io/devcontainers/features/git:1": {} /* Add Git */
   },
 ```
