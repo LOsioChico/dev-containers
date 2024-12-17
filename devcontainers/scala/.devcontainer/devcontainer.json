@@ -1,0 +1,48 @@
+{
+  "name": "SCALA",
+  "image": "ubuntu:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers-extra/features/scala-sdkman:2": {
+      "jdkVersion": "21.0.5-tem",
+      "jdkDistro": "tem"
+    },
+    "ghcr.io/devcontainers-extra/features/sbt-sdkman:2": {
+      "jdkVersion": "21.0.5-tem",
+      "jdkDistro": "tem"
+    },
+    "ghcr.io/devcontainers-extra/features/scalacli-sdkman:2": {
+      "jdkVersion": "21.0.5-tem",
+      "jdkDistro": "tem"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": []
+    }
+  },
+
+  "runArgs": ["--name", "scala_devcontainer"],
+
+  "workspaceFolder": "/repos",
+  "workspaceMount": "source=${localWorkspaceFolder}/../../repos/scala,target=/repos,type=bind"
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [3000],
+
+  // Use 'portsAttributes' to set default properties for specific forwarded ports.
+  // More info: https://containers.dev/implementors/json_reference/#port-attributes
+  // "portsAttributes": {
+  //   "3000": {
+  //     "label": "Hello Remote World",
+  //     "onAutoForward": "notify"
+  //   }
+  // },
+
+  // "postCreateCommand": "sdk install java 21.0.5-tem"
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
+}
